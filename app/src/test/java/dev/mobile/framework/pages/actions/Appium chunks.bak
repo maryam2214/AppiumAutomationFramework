@@ -1,0 +1,10 @@
+C:\Users\Maryam Sana\node_modules\.bin>appium --allow-insecure chromedriver_autodownload
+[Appium] Welcome to Appium v1.22.3
+[Appium] Non-default server args:
+[Appium]   allowInsecure: {
+[Appium]     0: chromedriver_autodownload
+[Appium]   }
+[Appium] Appium REST http interface listener started on 0.0.0.0:4723
+
+adb shell
+"dumpsys window | grep -E 'mCurrentFocus|mFocusedApp'"

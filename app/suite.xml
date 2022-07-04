@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Mobile Test Suite" parallel="tests" thread-count="2">
+    <listeners>
+        <listener class-name="dev.mobile.framework.util.listeners.AnnotationTransformer"/>
+        <listener class-name="dev.mobile.framework.util.listeners.TestListener"/>
+    </listeners>
+
+    <test name="emulator-5554">
+        <parameter name="deviceType" value="android"></parameter>
+        <parameter name="udid" value="emulator-5554"></parameter>
+        <parameter name="platformVersion" value="12"></parameter>
+        <classes>
+            <class name="dev.mobile.framework.tests.LoginTest"/>
+            <class name="dev.mobile.framework.tests.DragDropTest"/>
+            <class name="dev.mobile.framework.tests.DeviceControlsTest"/>
+            <class name="dev.mobile.framework.tests.DbTest"/>
+        </classes>
+    </test>
+
+    <test name="emulator-5556">
+        <parameter name="deviceType" value="android"></parameter>
+        <parameter name="udid" value="emulator-5556"></parameter>
+        <parameter name="platformVersion" value="12"></parameter>
+        <classes>
+            <class name="dev.mobile.framework.tests.LoginTest"/>
+            <class name="dev.mobile.framework.tests.SwipeTest"/>
+            <class name="dev.mobile.framework.tests.DeviceControlsTest"/>
+        </classes>
+    </test>
+
+</suite>

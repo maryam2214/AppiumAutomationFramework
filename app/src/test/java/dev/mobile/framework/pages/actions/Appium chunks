@@ -1,0 +1,18 @@
+C:\Users\Maryam Sana\node_modules\.bin>appium --allow-insecure chromedriver_autodownload
+[Appium] Welcome to Appium v1.22.3
+[Appium] Non-default server args:
+[Appium]   allowInsecure: {
+[Appium]     0: chromedriver_autodownload
+[Appium]   }
+[Appium] Appium REST http interface listener started on 0.0.0.0:4723
+
+adb shell
+"dumpsys window | grep -E 'mCurrentFocus|mFocusedApp'"
+
+After an exciting and memorable stint of 5.9 Years with PS, time has come for me to move on with more challenging roles in life and to start a new phase in my career.
+
+But before I take a bow, I want to use this opportunity to express my gratitude to all my Managers, Seniors, Colleagues and Friends for their constant Support, Motivation and Guidance throughout this journey that helped me grow both Personally and Professionally. It has been my pleasure working with you all, and I wish you all the best in your future endeavors.
+
+As I step out with heavy heart today, will surely miss each one of you.
+Here is wishing each one of you nothing less than the very best in your personal and professional lives!
+

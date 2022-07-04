@@ -1,0 +1,4 @@
+@echo off
+
+cd C:\repo\jar_war
+java -jar selenium-server.jar hub --host 0.0.0.0
