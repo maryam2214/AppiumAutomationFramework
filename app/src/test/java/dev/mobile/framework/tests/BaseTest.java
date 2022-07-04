@@ -46,21 +46,21 @@ public class BaseTest {
     }
 
     @BeforeClass
-    @Parameters({ "deviceType", "udid", "platformVersion" })
-    public void classLevelSetup(String deviceType, String udid, String platformVersion) {
+    @Parameters("device")
+    public void classLevelSetup(String device) {
         log.info("Tests are starting!");
         configReader = new ConfigReader();
 
-        if (deviceType.isEmpty()) {
-            deviceType = configReader.getDevice().toLowerCase(Locale.ROOT);
+        if (device.isEmpty()) {
+            device = configReader.getDevice().toLowerCase(Locale.ROOT);
         }
 
-        if (deviceType.equals("android")) {
+        if (device.equals("android")) {
             File app = new File("Android-NativeDemoApp-0.4.0.apk");
 
             DesiredCapabilities caps = new DesiredCapabilities();
-            caps.setCapability(MobileCapabilityType.UDID, udid);
-            caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, platformVersion);
+            caps.setCapability(MobileCapabilityType.DEVICE_NAME, "emulator-5554 ");
+            //caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "12.0");
             caps.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
             caps.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
             caps.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
